@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LRU Cache Visualizer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fa-solid fa-memory"></i> LRU Cache <span>Visualizer</span></h1>
+            <p>Interactive Least Recently Used Cache Visualization</p>
+        </header>
+
+        <div class="controls-panel">
+            <div class="control-group">
+                <label>Capacity</label>
+                <div class="input-wrapper">
+                    <input type="number" id="capacity-input" value="3" min="1" max="10">
+                    <button id="set-capacity-btn" class="btn primary">Set</button>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label>Operations</label>
+                <div class="operations-grid">
+                    <div class="op-input-group">
+                        <input type="number" id="put-key" placeholder="Key">
+                        <input type="number" id="put-value" placeholder="Val">
+                        <button id="put-btn" class="btn accent">Put</button>
+                    </div>
+                    <div class="op-input-group">
+                        <input type="number" id="get-key" placeholder="Key">
+                        <button id="get-btn" class="btn secondary">Get</button>
+                    </div>
+                </div>
+            </div>
+             <div class="message-log" id="message-log">
+                Ready to start...
+            </div>
+        </div>
+
+        <div class="visualization-area">
+            <div class="section-title">Cache State</div>
+            <div class="cache-container" id="cache-container">
+                <!-- Nodes will be injected here -->
+            </div>
+            <div class="legend">
+                <div class="legend-item"><span class="dot head"></span> Head (MRU)</div>
+                <div class="legend-item"><span class="dot tail"></span> Tail (LRU)</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="lru_cache.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

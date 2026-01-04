@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LRU Cache Visualizer - ALgorithm Mastery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="landing-container">
+        <header class="landing-header">
+            <h1>LRU Cache <span>Mastery</span></h1>
+            <p>Interactive Visualization of the Least Recently Used Caching Strategy</p>
+        </header>
+
+        <section class="hero-content">
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <i class="fa-solid fa-memory"></i>
+                    <h3>Optimal Caching</h3>
+                    <p>Learn how O(1) access and eviction strategies power modern computing systems.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fa-solid fa-link"></i>
+                    <h3>Hybrid Structure</h3>
+                    <p>See the combination of a <strong>HashMap</strong> for lookup and a <strong>Doubly Linked
+                            List</strong> for ordering.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fa-solid fa-eye"></i>
+                    <h3>Real-time Logic</h3>
+                    <p>Watch nodes move to the head on access and evicted from the tail when full.</p>
+                </div>
+            </div>
+
+            <a href="./visualization.html" class="cta-btn">
+                Launch Visualizer <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </section>
+
+        <section class="how-it-works"
+            style="max-width: 900px; text-align: left; background: rgba(255,255,255,0.05); padding: 2rem; border-radius: 1rem; border: 1px solid var(--node-border); margin-top: 2rem;">
+            <h2 style="text-align: center; margin-bottom: 2rem; color: var(--text-primary); font-size: 2rem;">How it
+                Works</h2>
+
+            <div class="step" style="margin-bottom: 1.5rem;">
+                <h3
+                    style="color: var(--accent-color); margin-bottom: 0.5rem; display:flex; align-items:center; gap:0.5rem;">
+                    <i class="fa-solid fa-1"></i> The Core Concept</h3>
+                <p style="color: var(--text-secondary); line-height: 1.6;">
+                    The LRU Cache keeps the items you use most often at the <strong>Head</strong> (Most Recently Used)
+                    and the ones you haven't used in a while at the <strong>Tail</strong> (Least Recently Used).
+                </p>
+            </div>
+
+            <div class="step" style="margin-bottom: 1.5rem;">
+                <h3
+                    style="color: var(--accent-color); margin-bottom: 0.5rem; display:flex; align-items:center; gap:0.5rem;">
+                    <i class="fa-solid fa-2"></i> Access (Get/Put)</h3>
+                <p style="color: var(--text-secondary); line-height: 1.6;">
+                    Whenever you <strong>Get</strong> a value or <strong>Update</strong> one, it becomes the "freshest"
+                    data. We instantly move it to the Head of the list so it's safe from eviction.
+                </p>
+            </div>
+
+            <div class="step">
+                <h3
+                    style="color: var(--accent-color); margin-bottom: 0.5rem; display:flex; align-items:center; gap:0.5rem;">
+                    <i class="fa-solid fa-3"></i> Eviction</h3>
+                <p style="color: var(--text-secondary); line-height: 1.6;">
+                    When the cache hits its <strong>Capacity</strong>, and you try to add a new item, we must delete
+                    something. We choose the <strong>Tail</strong> element because it's the one you need least.
+                </p>
+            </div>
+        </section>
+
+        <footer>
+            <p>Designed for Data Structure Students & Enthusiasts</p>
+        </footer>
+    </div>
+</body>
+
+</html>
